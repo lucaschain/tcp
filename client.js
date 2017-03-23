@@ -9,7 +9,7 @@ var srv = process.argv[2];
 var name = process.argv[3];
 
 client.connect(1337, srv, function() {
-  client.write("\r" + name + " entrou.");
+  client.write(name + " entrou.");
 });
 
 client.on('data', function(data) {
